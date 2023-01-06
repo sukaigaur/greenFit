@@ -1,38 +1,273 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  background-color: #fff;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 52px;
+  line-height: 60px;
+  color: #222;
+}
+
+h4 {
+  font-size: 24px;
+  color: #222;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+button.normal {
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.section-p1 {
+  padding: 40px 80px ;
+}
+
+.section-p2 {
+  padding: 0 100px ;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+.section-m2 {
+    margin: 40px 80px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .signIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    width:35rem;
+    padding: 2rem;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.09);
+  }
+  
+  .formDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container_form {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .container_form h1{
+    color: rgb(63, 63, 63);
+    font-size: 3rem;
+    
+  }
+
+  input {
+    margin-top: 16px;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+  }
+  
+  input::placeholder {
+    /* font-family: 'Yantramanav', sans-serif; */
+    color: #b2b2b2;
+    font-size: 1.4rem;
+    padding-left: 1.6rem;
+  }
+
+  input::after{
+    padding: 1.6rem;
+  }
+  
+  .login_button{
+    background-color: #64DD17;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    margin-top: 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .remember_style {
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    margin-top: 6px;
+  }
+  
+  .checkbox_remember {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  input[type='checkbox'] {
+    float: left;
+    margin-top: 4px;
+    width: 12px;
+    height: 12px;
+    border-style: none;
+    border-color: none;
+    border-radius: 2px;
+    color: #333;
+  }
+  
+  label {
+    color: #8c8c8c;
+    
+  }
+  label[type="me"] {
+    float: left;
+    margin-left: 6px;
+  }
+  
+  
+  label[type="help"] {
+    float: right;
+  }
+  
+  .new_netflix_style {
+    background-color: #64DD17;
+    color: #8c8c8c;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .new_netflix_style p span {
+    color: #333;
+  }
+  
+  .para {
+    font-family: 'Yantramanav', sans-serif;
+    color: #8c8c8c;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .new_netflix_style p a {
+    list-style: none;
+    color: #fff;
+    padding-left: 6px;
+  }
+
+
+  .logged_section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logged_h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #17dd24;
+
+  }
+
+  .logged_p {
+    display: flex;
+    justify-content: space-between;
+    color: #465b52;
+  }
+  
+  .logged_p a{
+    color: #465b52;
+    text-decoration: underline;
+
+  }
+
+  .check_style {
+    font-size: 5rem;
+    color: #17dd24;
+  }
+
+
+
+
+
+
+  
+  @media (max-width: 480px) {
+    .signIn {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    button {
+      background-color: aqua;
+    }
+  }

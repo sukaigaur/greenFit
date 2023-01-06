@@ -1,0 +1,38 @@
+/* #cards_section {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#cards_section .cards {
+    height: auto;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 8rem 0;
+    background-color: #efe8e8;
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: 1s linear;
+}
+
+
+#cards_section .cards::-webkit-scrollbar {
+    display: none;
+}
+
+.card_div {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 80vh;
+} */

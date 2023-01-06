@@ -1,0 +1,54 @@
+.banner_container {
+    top: 40%;
+    left: 8%;
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+
+}
+
+#banner_main img{
+    width: 100%;
+    
+}
+
+.banner_container h2 span {
+    color: #EC773A;
+}
+
+.banner_container h2 span:nth-child(2) {
+    color: #630444;
+}
+
+.banner_container p{
+    color: #fff;
+}
+
+.order_btn {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+
+.banner_container button{
+    background-color: #64DD17;
+    color: #fff;
+    font-size: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 4.6rem;
+    padding: 0.8rem 2rem;
+    display: flex;
+}
+#banner_main .circle {
+    opacity: 0.3;
+    width: 50%;
+    position: absolute;
+    bottom: 25%;
+    left: -20%;
+    z-index: 0;
+}
+
