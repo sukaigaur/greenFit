@@ -12,6 +12,7 @@ import axios from "axios";
 const LOGIN_URL = 'http://localhost:3500/api/login';
 
 const Login = () => {
+    
   const {setAuth} = useContext(AuthContext)
   const userRef = useRef();
   const errRef = useRef();
@@ -23,14 +24,13 @@ const Login = () => {
 
   useEffect(() => {
     userRef.current.focus();
-    toast("helloo lund");
-  }, []);
+}, []);
 
-  useEffect(() => {
+useEffect(() => {
     setErrMsg("");
-  }, [user, pwd]);
+}, [user, pwd]);
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     
     try {
@@ -40,13 +40,12 @@ const Login = () => {
             // withCredentials : true,
         }
         );
+        setSucces(true);
         console.log(response);
         if (response.data.success){
-            setSucces(true);
+            toast("Login Successfully");
             setUser({user, pwd, accessToken});
-            setPwd('');
-            // toast("Login Successfully");
-            
+            setPwd(''); 
         }
         const accessToken = response?.data?.accessToken;
         // const roles = response?.data?.roles;
@@ -72,6 +71,7 @@ const Login = () => {
 
   return (
     <>
+    <ToastContainer/>
     
         {
             success ? (

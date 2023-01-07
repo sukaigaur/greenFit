@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import AuthContext from "../context/AuthProvider";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 import axios from "axios";
 
 // import axios from './api/axios';
-const LOGIN_URL = 'http://localhost:3500/api/sign_up';
+const SIGNUP_URL = 'http://localhost:3500/api/sign_up';
 
 const Register = () => {
   const {setAuth} = useContext(AuthContext)
@@ -32,7 +34,7 @@ const Register = () => {
     e.preventDefault();
     
     try {
-        const response = await axios.post(LOGIN_URL, JSON.stringify({username:user, password:pwd , email}),
+        const response = await axios.post(SIGNUP_URL, JSON.stringify({username:user, password:pwd , email}),
         {
             headers :  {'Content-Type' : 'application/json'},
 
@@ -41,6 +43,7 @@ const Register = () => {
         );
         if(response.data.status){
             setSucces(true);
+            toast("Registered Successfully")
             // const accessToken = response?.data?.accessToken;
         // const roles = response?.data?.roles;
         setUser({user, pwd, email});
@@ -54,11 +57,11 @@ const Register = () => {
         if (!err?.response) {
             setErrMsg('No server response');
         } else if (err.response?.status === 400) {
-            setErrMsg("Missing username or password");
+            setErrMsg("Missing username or password ");
         }else if (err.response?.status === 401) {
             setErrMsg('Unauthorized');
         }else {
-            setErrMsg('Login Failed');
+            setErrMsg('Sign Up Failed');
         }
         errRef.current.focus();
     }
@@ -72,6 +75,7 @@ const Register = () => {
 
   return (
     <>
+    <ToastContainer/>
         {
             success ? (
                 <section className="logged_section" >

@@ -9,6 +9,8 @@
 .card_section {
     display: flex;
     justify-content: center;
+    
+    
 }
 
 #card {
@@ -29,6 +31,9 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid rgba(255, 255, 255, 0.55);
+    
+    
+    
 }
 
 
@@ -87,6 +92,7 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    
 }
 
 .price_btn {
@@ -131,27 +137,31 @@ span .add_btn:active {
 
 #cards_section {
     padding-top: 4rem;
-    padding-bottom: 10rem;
+    /* padding-bottom: 10rem; */
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    
+    
 }
 
 
 .cards {
     height: auto;
     margin: 2rem 5rem;
-    width: 70%;
+    width: 69%;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
     padding: 8rem 0;
     background-color: #efe8e8;
     display: flex;
-    overflow: auto;
+    overflow: scroll ;
     scroll-behavior: smooth;
+    overscroll-behavior-y: auto;
     transition: 1s linear;
+    
 }
 
 
@@ -166,5 +176,29 @@ span .add_btn:active {
     justify-content: space-between;
     align-items: center;
     width: auto;
-    height: 80vh;
+    height: 600px;
+
+    
+}
+
+
+
+.chevron {
+    z-index: 20;
+    position: absolute;
+    bottom: -500px;
+    right: 180px;
+    display: flex;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
 }
