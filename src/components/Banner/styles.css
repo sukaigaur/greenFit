@@ -43,6 +43,37 @@
     padding: 0.8rem 2rem;
     display: flex;
 }
+
+
+.banner_container button:hover{
+    background-color: #499d14;
+    color: #fff;
+    font-size: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 4.6rem;
+    padding: 0.8rem 2rem;
+    display: flex;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner_container button:active{
+    background-color: #3a800f;
+    color: #fff;
+    font-size: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 4.6rem;
+    padding: 0.8rem 2rem;
+    display: flex;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
 #banner_main .circle {
     opacity: 0.3;
     width: 50%;

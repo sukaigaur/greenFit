@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartIcon from '../../components/CartIcon'
 import { getCartTotal, removeItem, increaseItemQuantity, decreaseItemQuantity } from '../../features/cartSlice'
@@ -8,6 +8,7 @@ import './styles.css'
 
 const Cart = () => {
 
+
   const {cart, totalQuantity, totalPrice} = useSelector((state)=>(state.allCart));
   
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Cart = () => {
   
   dispatch(getCartTotal());
 
-
+  
   return (
     <section id='cart_section'>
         <div className='logo_btn'>
@@ -53,7 +54,7 @@ const Cart = () => {
             <h3>Summary</h3>
             <h4>Total Quantity-{totalQuantity}</h4>
             <h4>Total Amount-{totalPrice}</h4>
-            <button>Checkout</button>
+            <button >Checkout</button>
           </div>
         </div>
     </section>
