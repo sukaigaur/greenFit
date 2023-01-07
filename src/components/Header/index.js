@@ -22,7 +22,7 @@ const Header = () => {
             </ul> */}
             <ul className='ul_container-2'>
               <Link to="/login" ><li><a href='/'>Log in</a></li></Link>
-              <li><button className='normal'>Sign Up</button></li>
+              <Link to="/signup" ><li><button className='normal'>Sign Up</button></li></Link>
               {/* <span class="material-symbols-outlined cart_btn">shopping_cart</span> */}
               <Link to='/cart'><CartIcon/></Link>
               
