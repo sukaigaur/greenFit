@@ -26,9 +26,10 @@ const Card = () => {
               {item.rating}
             </div>
             <div className="price_btn">
-              <h6>{item.dollar}{item.price}</h6>
+              <h6>{item.dollar}{item.price} {item.weight}</h6>
               <span>
-              <button className="normal add_btn" onClick={()=>dispatch (addToCart(item))}>{item.cart_button}</button></span>
+              <button className="normal add_btn" onClick={()=>dispatch (addToCart(item))}>{item.cart_button}</button>
+              </span>
             </div>
           </div>
         </div>
